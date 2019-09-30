@@ -1,0 +1,32 @@
+circuito=[5, 0, 1, 0, 4, 1, 0, 2, 0, 4, 5, 0, 5, 0, 1, 2, -1, 3, 0, 0, 1, 0, 3, 0, 5, 3, -1, 5, -1, 1, 2, 1, 3, 0, 3, 2, 0, 5, 1, 2, 5, 1, 1, 1, 5, 4, 0, 4, 1, 2, 3, 1, 2, 0, 4, 5, -1, -1, 1, 1, 5, 2, 1, 1, 1, 1, 1, 4, 1, 5, 2, 2, 4, 1, 0, 3, 1, 1, -1, 2, 4, 1, 5, 2, 2, 4, 2, 5, 2, 0, 1, 3, 0, 3, 3, 4, 2, 1, 3, 5, 5, 2, 1, 2, 5, 1, -1, 3, 3, 1, 1, -1, 1, 2, 4, 4, 2, 2, 2, 0, 4, 3, 5, -1, 3, 2, 3, 1, 4, 0, 2, 4, 2, 4, 5, 3, 3, 1, 3, 1, 2, 4, 1, -1, 3, 5, 4, 1, 4, 3]
+vectorEntradas=[[0,1,0,1,0,0],[1,0,1,0,0,0],[0,0,0,0,1,1],[0,1,0,0,0,1],[0,0,0,0,0,0],[1,1,1,1,1,1]]
+vectorSalidas=[[1,1,0,0,0,0],[1,1,1,0,0,0],[1,0,0,0,0,1],[1,1,0,0,0,0],[1,1,0,0,0,0],[1,1,1,0,0,0]]
+puertasRotas=[[1,1],[1,3],[2,2]]
+#pares de enteros que representan la posici�n de la puerta que est� rota,sin tener en cuenta que en i=0 est�n las entradas
+entradasRotas=[[2,0,1],[2,3,1],[0,1,0],[3,0,1]];
+#aqu� usamos tr�os de enteros que representan, primero que puerta tiene una entrada rota, y sregundo cual es
+#por ejemplo [5,3,0] ser�a la entrada 1 de la puerta en 5,3 (sin tener en cuenta que en i=0 est�n las entradas)
+n=6;
+m=5;
+#�Qu� tipo de algoritmo quieres usar? (0 para eaSimple 1 para eaPlusLambda
+algoritmo=1;
+#�Que tipo de cruzamiento?(0 un punto, 1 dos puntos y 2 para uniforme)
+cruzamiento=1;
+#indpb de cruzamiento(Solo afecta en uniforme)
+indpbCx=0.2;
+#cxpbd entre 0.0 y 1.0
+cxpbd=0.2
+#�Qu� tipo de mutaci�n?(0 uniforme sin ajustar y 1 uniforme con low y up ajustados)
+mutacion=1;
+#indpb de mutaci�n
+indpbMut=0.2;
+#mutpbd entre 0.0 y 1.0
+mutpbd=0.2
+#lambda (solo para muplusLambda)
+lam=15;
+#mu (solo para muPlusLambda)
+mu=15;
+#numero de generaciones
+ngen=20;
+#poblacion inicial tama�o (en el problema hemos ajustado a 15 siempre)
+pobTam=15;
